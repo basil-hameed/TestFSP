@@ -99,15 +99,18 @@ TestCase-12
     Click Element    //*[@id="ui-datepicker-div"]/table/tbody/tr[3]/td[6]/a
 
 TestCase-13
-    [Documentation]    Verifies selecting start and end dates shows the correct message.
-    Wait Until Element Is Visible    id=start-date    10s
+    [Documentation]    Select start and end date from Date Picker 3
+    [Tags]    Date Picker 3
+    Element Should Be Visible    id=start-date
     Input Text    id=start-date    ${START_DATE}
-    Wait Until Element Is Visible    id=end-date    10s
+
+    Element Should Be Visible    id=end-date
     Input Text    id=end-date    ${END_DATE}
-    Wait Until Element Is Enabled    XPATH=//*[@class="date-picker-box"]/button    10s
-    Click Element    XPATH=//*[@class="date-picker-box"]/button
-    Wait Until Page Contains    You selected a range of 3 days.    20s
-    Log    Test passed successfully.
+
+    Element Should Be Enabled    XPATH=//*[@class="date-picker-box"]/button
+    Click Element    //*[@class="date-picker-box"]/button
+    Element Should Be Visible    id=result
+    Element Text Should Be    id=result    You selected a range of 3 days. 
 
 TestCase-14
     [Documentation]    Drag and Drop operation
