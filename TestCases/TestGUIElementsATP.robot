@@ -110,7 +110,7 @@ TestCase-13
     Element Should Be Enabled    XPATH=//*[@class="date-picker-box"]/button
     Click Element    //*[@class="date-picker-box"]/button
     Element Should Be Visible    id=result
-    Wait Until Element Contains    id=result    You selected a range of 3 days. 
+    Wait Until Element Contains    id=result    You selected a range of 3 days.    15s
 
 TestCase-14
     [Documentation]    Drag and Drop operation
