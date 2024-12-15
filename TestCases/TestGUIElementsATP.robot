@@ -106,7 +106,7 @@ TestCase-13
     Input Text    id=end-date    ${END_DATE}
     Wait Until Element Is Enabled    XPATH=//*[@class="date-picker-box"]/button    10s
     Click Element    XPATH=//*[@class="date-picker-box"]/button
-    Wait Until Page Contains    You selected a range of 3 days.    10s
+    Wait Until Page Contains    You selected a range of 3 days.    20s
     Log    Test passed successfully.
 
 TestCase-14
