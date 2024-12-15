@@ -109,7 +109,7 @@ TestCase-13
 
     Element Should Be Enabled    XPATH=//*[@class="date-picker-box"]/button
     Click Element    //*[@class="date-picker-box"]/button
-    Page Should Contain   You selected a range of 3 days. 
+    Wait Until Page Contains    You selected a range of 3 days.    10s
 
 TestCase-14
     [Documentation]    Drag and Drop operation
